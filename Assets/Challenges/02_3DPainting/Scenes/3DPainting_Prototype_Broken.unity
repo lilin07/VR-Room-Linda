@@ -2711,9 +2711,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899473164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.82072884, z: -0, w: 0.57131803}
+  m_LocalPosition: {x: 0, y: 0, z: -0.268}
+  m_LocalScale: {x: 0.009521786, y: 0.0077674445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 339375311}
@@ -2721,11 +2721,11 @@ RectTransform:
   - {fileID: 644717491}
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: -30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -110.316, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 610.5, y: 388.5}
-  m_SizeDelta: {x: 1221, y: 777}
+  m_AnchoredPosition: {x: -1.393, y: 1.27}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &901959580
 GameObject:
@@ -4395,6 +4395,7 @@ GameObject:
   - component: {fileID: 1563259298}
   - component: {fileID: 1563259297}
   - component: {fileID: 1563259299}
+  - component: {fileID: 1563259300}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -4465,10 +4466,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 4800a40b-57b6-4dd0-87c4-8fe370c47e1d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4489,10 +4490,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 17833938-3ebf-4246-b196-554d336b848b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4513,10 +4514,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 337b7808-682e-4c18-a0c1-4045880e725b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4537,10 +4538,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 7b133e96-4f77-45b1-8d6c-96783fe562a9
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4573,10 +4574,10 @@ MonoBehaviour:
   m_DirectionalAnchorRotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 7a827343-37ea-48d9-a705-2a8b6bb210dc
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4705,6 +4706,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 7785142639058902462}
+--- !u!114 &1563259300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563259294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d337e8bc7ac4498e0df29e7b8bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_Name: Action
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e8206c9f-6b86-4060-ac47-5f302390f902
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: acb356ff-83f6-46dd-a7fb-d2c634bf32ba
+      m_Path: <OpenVROculusTouchController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ef0b73b7-de09-46d3-85d1-c3963fae5288
+      m_Path: '*/{PrimaryButton}'
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action
+      m_Flags: 0
+    m_Flags: 0
+  OnPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1678550712}
+        m_TargetAssemblyTypeName: ToggleRay, Assembly-CSharp
+        m_MethodName: ActivateRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1678550712}
+        m_TargetAssemblyTypeName: ToggleRay, Assembly-CSharp
+        m_MethodName: DeactivateRay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1571015247
 GameObject:
   m_ObjectHideFlags: 0
@@ -6412,7 +6480,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3341742965152813841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6908,7 +6976,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 0}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -6937,7 +7005,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.25
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7253,7 +7321,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.05
+          m_FloatArgument: 0.25
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7565,7 +7633,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7733,7 +7801,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7785142639058902457}
         m_TargetAssemblyTypeName: CreateTrail, Assembly-CSharp
-        m_MethodName: EndTrail
+        m_MethodName: StartTrail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7772,7 +7840,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7785142639058902457}
         m_TargetAssemblyTypeName: CreateTrail, Assembly-CSharp
-        m_MethodName: StartTrail
+        m_MethodName: EndTrail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
